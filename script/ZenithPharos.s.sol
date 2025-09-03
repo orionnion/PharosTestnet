@@ -73,7 +73,7 @@ contract ZenithAddLiquidity is Script {
             amount0Min: 18084,
             amount1Min: 9746,
             recipient: 0x7BDF2f4E590B5b9523D6D91b5a193AA503021381,
-            deadline: 1756881080
+            deadline: block.timestamp + 5 minutes
         });
         while (repetition < 50) {
             (bool success, ) = zenithAddLiquidity.call(
