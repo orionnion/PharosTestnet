@@ -70,12 +70,12 @@ contract ZenithAddLiquidity is Script {
             tickUpper: 887270,
             amount0Desired: 18531,
             amount1Desired: 10000,
-            amount0Min: 18084,
-            amount1Min: 9746,
+            amount0Min: 15000,
+            amount1Min: 8000,
             recipient: 0x7BDF2f4E590B5b9523D6D91b5a193AA503021381,
             deadline: block.timestamp + 5 minutes
         });
-        while (repetition < 50) {
+        while (repetition < 5) {
             (bool success, ) = zenithAddLiquidity.call(
                 abi.encodeWithSelector(bytes4(0x88316456), params)
             );
